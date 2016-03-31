@@ -54,6 +54,7 @@ OPTIONS_SCHEMA =
   type: 'object'
   properties:
     auth:
+      title: 'Browser API Key'
       type: 'string'
       required: true
 
@@ -93,7 +94,7 @@ class Plugin extends EventEmitter
     client.annotate([ request ]).then((response) =>
       response =
         devices: ['*']
-        payload: response
+        payload: responseg
       self.emit 'message', response
     ).catch (err) ->
       debug err
