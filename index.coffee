@@ -94,7 +94,7 @@ class Plugin extends EventEmitter
     client.annotate([ request ]).then((response) =>
       response =
         devices: ['*']
-        payload: responseg
+        payload: response
       self.emit 'message', response
     ).catch (err) ->
       debug err
